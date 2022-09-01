@@ -12,7 +12,7 @@ from dateutil.relativedelta import relativedelta
 
 
 
-def stock_update(company, ticker, pdufa):
+def stock_update(company, ticker, pdufa, message):
     days = 252
     currentStartTimeDate = datetime.datetime.now() - relativedelta(months=3)
     currentTimeDate = datetime.datetime.now()
@@ -59,8 +59,9 @@ def stock_update(company, ticker, pdufa):
 
     ax1.legend()
     ax1.grid()
-    image = fig.savefig(f'ticker_images/{company}_{ticker}_{pdufa}.jpg', bbox_inches='tight', dpi=150)
+    fig.savefig(f'ticker_images/{company}_{ticker}_{pdufa}.jpg', bbox_inches='tight', dpi=150)
 
+    image_filepath = f'ticker_images/{company}_{ticker}_{pdufa}.jpg'
 
     price = float(df["Close"][-1])
 
@@ -68,7 +69,7 @@ def stock_update(company, ticker, pdufa):
     resistance = float(pivot_high_1)
     support = float(pivot_low_1)
 
-    text_to_discord = f'PDUFA for Company: {company}\nTicker: {ticker}\nDate: {pdufa}\nPrice: {price} \nSupport: {support} \nResistance: {resistance}'
+
 
 
     to_dict = {"company": company,
@@ -78,7 +79,7 @@ def stock_update(company, ticker, pdufa):
                "resistance": resistance,
                "support": support}
 
-    #write_json(to_dict)
+    write_json(to_dict)
 
 
-    return text_to_discord, image
+    return message, image_filepath

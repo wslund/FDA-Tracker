@@ -24,9 +24,11 @@ def ticker_update():
         price = data["Close"]
         price = price[0]
         if price > resistance:
-            stock_update(company=company, ticker=ticker, pdufa=pdufa)
+            text1 = f'{company}: {ticker} Has broken above the resistance'
+            stock_update(company=company, ticker=ticker, pdufa=pdufa, message=text1)
         elif price < support:
-            stock_update(company=company, ticker=ticker, pdufa=pdufa)
+            text2 = f'{company}: {ticker} Has broken support'
+            stock_update(company=company, ticker=ticker, pdufa=pdufa, message=text2)
         else:
             pass
     return
