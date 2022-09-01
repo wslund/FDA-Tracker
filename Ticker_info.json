@@ -1,0 +1,196 @@
+{
+    "Ticker_info": [
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-12-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-09-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "Revance",
+            "ticker": "RVNC",
+            "pdufa": "2022-09-08",
+            "price": 19.9,
+            "resistance": 23.09,
+            "support": 16.47
+        },
+        {
+            "company": "ALNYLAM",
+            "ticker": "ALNY",
+            "pdufa": "2022-10-06",
+            "price": 206.67,
+            "resistance": 236.8,
+            "support": 188.88
+        },
+        {
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-09-16",
+            "price": 5.84,
+            "resistance": 8.18,
+            "support": 4.18
+        },
+        {
+            "company": "HERON",
+            "ticker": "HRTX",
+            "pdufa": "2022-09-17",
+            "price": 4.09,
+            "resistance": 5.62,
+            "support": 2.85
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-12-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-09-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "Revance",
+            "ticker": "RVNC",
+            "pdufa": "2022-09-08",
+            "price": 19.9,
+            "resistance": 23.09,
+            "support": 16.47
+        },
+        {
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-09-16",
+            "price": 5.84,
+            "resistance": 8.18,
+            "support": 4.18
+        },
+        {
+            "company": "ALNYLAM",
+            "ticker": "ALNY",
+            "pdufa": "2022-10-06",
+            "price": 206.67,
+            "resistance": 236.8,
+            "support": 188.88
+        },
+        {
+            "company": "HERON",
+            "ticker": "HRTX",
+            "pdufa": "2022-09-17",
+            "price": 4.09,
+            "resistance": 5.62,
+            "support": 2.85
+        },
+        {
+            "company": "HERON",
+            "ticker": "HRTX",
+            "pdufa": "2022-09-17",
+            "price": 4.09,
+            "resistance": 5.62,
+            "support": 2.85
+        },
+        {
+            "company": "Revance",
+            "ticker": "RVNC",
+            "pdufa": "2022-09-08",
+            "price": 19.9,
+            "resistance": 23.09,
+            "support": 16.47
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-09-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "ALNYLAM",
+            "ticker": "ALNY",
+            "pdufa": "2022-10-06",
+            "price": 206.67,
+            "resistance": 236.8,
+            "support": 188.88
+        },
+        {
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-09-16",
+            "price": 5.84,
+            "resistance": 8.18,
+            "support": 4.18
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-12-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "HERON",
+            "ticker": "HRTX",
+            "pdufa": "2022-09-17",
+            "price": 4.09,
+            "resistance": 5.62,
+            "support": 2.85
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-12-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "Revance",
+            "ticker": "RVNC",
+            "pdufa": "2022-09-08",
+            "price": 19.9,
+            "resistance": 23.09,
+            "support": 16.47
+        },
+        {
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-09-28",
+            "price": 7.13,
+            "resistance": 8.65,
+            "support": 5.43
+        },
+        {
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-09-16",
+            "price": 5.84,
+            "resistance": 8.18,
+            "support": 4.18
+        },
+        {
+            "company": "ALNYLAM",
+            "ticker": "ALNY",
+            "pdufa": "2022-10-06",
+            "price": 206.67,
+            "resistance": 236.8,
+            "support": 188.88
+        }
+    ]
+}
