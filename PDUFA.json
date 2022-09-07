@@ -1,76 +1,94 @@
 {
     "PDUFA": [
         {
-            "status": true,
-            "company": "TG",
-            "ticker": "TGTX",
-            "pdufa": "2022-12-28"
+            "status": false,
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-08-19"
         },
         {
-            "status": true,
-            "company": "HERON",
-            "ticker": "HRTX",
-            "pdufa": "2022-09-17"
+            "status": false,
+            "company": "RHYTHM",
+            "ticker": "RYTM",
+            "pdufa": "2022-06-16"
         },
         {
-            "status": true,
-            "company": "TG",
-            "ticker": "TGTX",
-            "pdufa": "2022-12-28"
+            "status": false,
+            "company": "BRISTOL",
+            "ticker": "BMY",
+            "pdufa": "2022-06-24"
         },
         {
-            "status": true,
-            "company": "Revance",
-            "ticker": "RVNC",
-            "pdufa": "2022-09-08"
+            "status": false,
+            "company": "Myovant",
+            "ticker": "MYOV",
+            "pdufa": "2022-08-06"
         },
         {
-            "status": true,
+            "status": false,
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-05-20"
+        },
+        {
+            "status": false,
+            "company": "BeiGene,",
+            "ticker": "BGNE",
+            "pdufa": "2022-07-12"
+        },
+        {
+            "status": false,
             "company": "TG",
             "ticker": "TGTX",
             "pdufa": "2022-09-28"
         },
         {
-            "status": true,
+            "status": false,
+            "company": "Verrica",
+            "ticker": "VRCA",
+            "pdufa": "2022-05-24"
+        },
+        {
+            "status": false,
+            "company": "TG",
+            "ticker": "TGTX",
+            "pdufa": "2022-12-28"
+        },
+        {
+            "status": false,
+            "company": "BRISTOL",
+            "ticker": "BMY",
+            "pdufa": "2022-03-27"
+        },
+        {
+            "status": false,
+            "company": "bluebird",
+            "ticker": "BLUE",
+            "pdufa": "2022-06-17"
+        },
+        {
+            "status": false,
             "company": "ALNYLAM",
             "ticker": "ALNY",
             "pdufa": "2022-10-06"
         },
         {
-            "status": true,
-            "company": "TG",
-            "ticker": "TGTX",
-            "pdufa": "2022-09-28"
+            "status": false,
+            "company": "HERON",
+            "ticker": "HRTX",
+            "pdufa": "2022-09-17"
         },
         {
-            "status": true,
+            "status": false,
             "company": "Revance",
             "ticker": "RVNC",
             "pdufa": "2022-09-08"
         },
         {
-            "status": true,
+            "status": false,
             "company": "bluebird",
             "ticker": "BLUE",
             "pdufa": "2022-09-16"
-        },
-        {
-            "status": true,
-            "company": "bluebird",
-            "ticker": "BLUE",
-            "pdufa": "2022-09-16"
-        },
-        {
-            "status": true,
-            "company": "ALNYLAM",
-            "ticker": "ALNY",
-            "pdufa": "2022-10-06"
-        },
-        {
-            "status": true,
-            "company": "HERON",
-            "ticker": "HRTX",
-            "pdufa": "2022-09-17"
         }
     ]
 }

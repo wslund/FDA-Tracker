@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import datetime
-
+import time
 
 
 def get_url():
@@ -47,6 +47,7 @@ def get_url():
         company = company.replace("[", "").replace("'", "")
         ticker_list.append(ticker)
         company_list.append(company)
+        time.sleep(1)
 
 
 
@@ -301,6 +302,7 @@ def scrape_engine():
 
         counter += 1
         company_info.append((comp, tick, day, month, year))
+        time.sleep(1)
 
 
 
