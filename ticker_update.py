@@ -1,37 +1,45 @@
 import json
 import yfinance as yf
+from stock_updating import stock_update
+
+import datetime
 from datetime import datetime
 
 
-from stock_updating import stock_update
-
-
-def ticker_update():
+def update_ticker():
     fileObject = open("Ticker_info.json", "r")
     jsonContent = fileObject.read()
     json_list = json.loads(jsonContent)
 
-    ticker_list = []
+    text_to_dicord = ""
+    file_path = ""
 
-    for i in json_list["Ticker_info"]:
+    for count, i in enumerate(json_list["Ticker_info"]):
         pdufa = i["pdufa"]
         company = i["company"]
         ticker = i["ticker"]
         resistance = i["resistance"]
         support = i["support"]
-        ticker_list.append((ticker, resistance, support))
         data = yf.download(ticker, start=datetime.now())
         price = data["Close"]
         price = price[0]
         if price > resistance:
-            text1 = f'{company}: {ticker} Has broken above the resistance'
-            stock_update(company=company, ticker=ticker, pdufa=pdufa, message=text1)
+            code_number = 1
+            text, img = stock_update(company=company, ticker=ticker, pdufa=pdufa, code_number=code_number, element=count)
+            text_to_dicord = text
+            file_path = img
+
         elif price < support:
-            text2 = f'{company}: {ticker} Has broken support'
-            stock_update(company=company, ticker=ticker, pdufa=pdufa, message=text2)
+            code_number = 0
+            text, img = stock_update(company=company, ticker=ticker, pdufa=pdufa, code_number=code_number, element=count)
+            text_to_dicord = text
+            file_path = img
         else:
             pass
-    return
+    return text_to_dicord, file_path
+
+
+
 
 
 
