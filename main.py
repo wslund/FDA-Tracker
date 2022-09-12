@@ -6,7 +6,7 @@ import discord
 from get_stocks import ticker_engine
 from scraping import scrape_engine
 from check_pdufa_list import delete_duplicates, remove_passed_dates
-from KEY import TOKEN
+from KEY import TOKEN, CHANNEL
 
 
 
@@ -107,7 +107,7 @@ async def one_per_hour():
             image = img[i]
 
             with open(image, "rb") as fh:
-                channel = client.get_channel(1001169548961132566)
+                channel = client.get_channel(CHANNEL)
                 file = discord.File(fh, filename=image)
                 message = f'New Message:\n{tex_to_be_sent}'
 
