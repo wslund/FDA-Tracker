@@ -202,7 +202,7 @@ def pick_out_year(line):
 
 def check_list():
 
-    fileObject = open("PDUFA.json", "r")
+    fileObject = open("../json_files/PDUFA.json", "r")
     jsonContent = fileObject.read()
     aList = json.loads(jsonContent)
 
@@ -236,7 +236,7 @@ def write_json(data_new):
 
     new_data = []
     old_data = []
-    with open("PDUFA.json", 'r') as fp:
+    with open("../json_files/PDUFA.json", 'r') as fp:
         data = json.load(fp)
 
     for i in data["PDUFA"]:
@@ -271,7 +271,7 @@ def write_json(data_new):
                    "pdufa": pdufa}
         pdufa_dict["PDUFA"].append(to_dict)
 
-    with open("PDUFA.json", 'w') as f:
+    with open("../json_files/PDUFA.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return

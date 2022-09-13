@@ -1,5 +1,5 @@
 KEY.py
-PDUFA.json
-scrape_text/
+json_files/PDUFA.json
+scrape_and_get_company/scrape_text/
 ticker_images/
-Ticker_info.json
+json_files/Ticker_info.json

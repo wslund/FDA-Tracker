@@ -1,13 +1,13 @@
 import json
 import yfinance as yf
-from stock_updating import stock_update
+from scrape_and_get_company.stock_updating import stock_update
 
 import datetime
 from datetime import datetime
 
 
 def update_ticker():
-    fileObject = open("Ticker_info.json", "r")
+    fileObject = open("../json_files/Ticker_info.json", "r")
     jsonContent = fileObject.read()
     json_list = json.loads(jsonContent)
 

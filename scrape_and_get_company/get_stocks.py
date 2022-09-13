@@ -126,7 +126,7 @@ def changes_status(changes, none_changes):
 
 
 
-    with open("PDUFA.json", 'w') as f:
+    with open("../json_files/PDUFA.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return
@@ -136,7 +136,7 @@ def changes_status(changes, none_changes):
 
 def ticker_engine():
 
-    fileObject = open("PDUFA.json", "r")
+    fileObject = open("../json_files/PDUFA.json", "r")
     jsonContent = fileObject.read()
     aList = json.loads(jsonContent)
 

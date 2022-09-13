@@ -4,7 +4,7 @@ import datetime
 
 def delete_duplicates():
     new_data = []
-    with open("PDUFA.json", 'r') as fp:
+    with open("../json_files/PDUFA.json", 'r') as fp:
         data = json.load(fp)
 
     for i in data["PDUFA"]:
@@ -32,13 +32,13 @@ def delete_duplicates():
 
 
 
-    with open("PDUFA.json", 'w') as f:
+    with open("../json_files/PDUFA.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return
 
 def remove_passed_dates():
-    filepath = 'PDUFA.json'
+    filepath = '../json_files/PDUFA.json'
     with open(filepath, 'r') as fp:
         data = json.load(fp)
 
@@ -77,7 +77,7 @@ def remove_passed_dates():
                    "pdufa": pdufa}
         pdufa_dict["PDUFA"].append(to_dict)
 
-    with open("PDUFA.json", 'w') as f:
+    with open("../json_files/PDUFA.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return
