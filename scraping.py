@@ -12,7 +12,7 @@ def get_url():
 
     URL_list = []
     url = "https://efts.sec.gov/LATEST/search-index"
-    form = {"q": "\"pdufa goal date of\" ", "dateRange": "custom", "startdt": "2021-12-12", "enddt": date,
+    form = {"q": "\"pdufa goal date of\" ", "dateRange": "custom", "startdt": date, "enddt": date,
             "category": "all", "locationType": "located", "locationCode": "all", "filter_forms": "8-K", "page": "1",
             "from": 0}
     form_data = json.dumps(form)
@@ -352,7 +352,6 @@ def scrape_engine():
 
     write_json(new_data)
 
-
     return
 
 
@@ -360,7 +359,7 @@ def scrape_engine():
 
 
 
-
+test = scrape_engine()
 
 
 

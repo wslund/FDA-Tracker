@@ -94,8 +94,8 @@ def updating():
 
 
 
-schedule.every(5).minutes.do(one_per_hour)
-schedule.every(2).minutes.do(updating)
+schedule.every().hour.do(one_per_hour)
+schedule.every(7).minutes.do(updating)
 
 while True:
     schedule.run_pending()
