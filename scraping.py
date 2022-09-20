@@ -202,7 +202,7 @@ def pick_out_year(line):
 
 def check_list():
 
-    fileObject = open("../json_files/PDUFA.json", "r")
+    fileObject = open("PDUFA.json", "r")
     jsonContent = fileObject.read()
     aList = json.loads(jsonContent)
 
@@ -235,8 +235,11 @@ def check_list():
 def write_json(data_new):
 
     new_data = []
-    old_data = []
-    with open("../json_files/PDUFA.json", 'r') as fp:
+    old_data_to_merge = []
+    old_data_without_status = []
+    to_merge = []
+
+    with open("PDUFA.json", 'r') as fp:
         data = json.load(fp)
 
     for i in data["PDUFA"]:
@@ -244,17 +247,35 @@ def write_json(data_new):
         company = i["company"]
         ticker = i["ticker"]
         pdufa = i["pdufa"]
-        old_data.append((status, company, ticker, pdufa))
+        old_data_without_status.append((company, ticker, pdufa))
 
-    for i in list(data_new):
+    for i in data["PDUFA"]:
         status = i["status"]
         company = i["company"]
         ticker = i["ticker"]
         pdufa = i["pdufa"]
-        new_data.append((status, company, ticker, pdufa))
+        old_data_to_merge.append((status, company, ticker, pdufa))
 
-    merged_data = new_data + old_data
+    for i in list(data_new):
+        company = i["company"]
+        ticker = i["ticker"]
+        pdufa = i["pdufa"]
+        new_data.append((company, ticker, pdufa))
+
+
+    new_ones = set(new_data) - set(old_data_without_status)
+
+    for i in list(new_ones):
+        company = i[0]
+        ticker = i[1]
+        pdufa = i[2]
+        status = False
+        to_merge.append((status, company, ticker, pdufa))
+
+
+    merged_data = old_data_to_merge + to_merge
     remove_duplicate = tuple(set(merged_data))
+
 
     pdufa_dict = {"PDUFA": []}
 
@@ -271,7 +292,9 @@ def write_json(data_new):
                    "pdufa": pdufa}
         pdufa_dict["PDUFA"].append(to_dict)
 
-    with open("../json_files/PDUFA.json", 'w') as f:
+
+
+    with open("PDUFA.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return
@@ -318,10 +341,9 @@ def scrape_engine():
         month = i[3]
         year = i[4]
         pdufa = f'{year}-{month}-{day}'
-        status = False
 
-        to_dict = {"status": status,
-                   "company": company,
+
+        to_dict = {"company": company,
                    "ticker": ticker,
                    "pdufa": pdufa}
 
@@ -335,7 +357,9 @@ def scrape_engine():
 
 
 
-test = scrape_engine()
+
+
+
 
 
 

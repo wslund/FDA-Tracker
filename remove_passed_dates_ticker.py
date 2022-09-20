@@ -6,7 +6,7 @@ import datetime
 
 
 def remove_passed_dates_ticker_info():
-    filepath = '../json_files/Ticker_info.json'
+    filepath = 'Ticker_info.json'
     with open(filepath, 'r') as fp:
         data = json.load(fp)
 
@@ -55,7 +55,7 @@ def remove_passed_dates_ticker_info():
 
         pdufa_dict["Ticker_info"].append(to_dict)
 
-    with open("../json_files/Ticker_info.json", 'w') as f:
+    with open("Ticker_info.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return

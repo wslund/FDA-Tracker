@@ -3,8 +3,7 @@ import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.transforms as transforms
-
-
+import time
 import datetime
 from dateutil.relativedelta import relativedelta
 
@@ -126,7 +125,7 @@ def changes_status(changes, none_changes):
 
 
 
-    with open("../json_files/PDUFA.json", 'w') as f:
+    with open("PDUFA.json", 'w') as f:
         json.dump(pdufa_dict, f, indent=4)
 
     return
@@ -136,7 +135,7 @@ def changes_status(changes, none_changes):
 
 def ticker_engine():
 
-    fileObject = open("../json_files/PDUFA.json", "r")
+    fileObject = open("PDUFA.json", "r")
     jsonContent = fileObject.read()
     aList = json.loads(jsonContent)
 
@@ -151,7 +150,8 @@ def ticker_engine():
         ticker = i["ticker"]
         pdufa = i["pdufa"]
         if status == True:
-            status_changes.append((company, ticker, pdufa, status))
+            status_changes_none.append((company, ticker, pdufa, status))
+
 
         if status == False:
             text, img = get_stock(company, ticker, pdufa)
@@ -160,11 +160,15 @@ def ticker_engine():
             status = True
             status_changes.append((company, ticker, pdufa, status))
 
+
+
+
     changes_status(status_changes, status_changes_none)
 
 
-    return text_to_discord, img_to_discord
 
+
+    return text_to_discord, img_to_discord
 
 
 

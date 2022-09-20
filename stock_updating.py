@@ -90,16 +90,16 @@ def stock_update(company, ticker, pdufa, code_number, element):
 
 
     if code_number == 1:
-        message_return = f'{company}: {ticker} Has broken above the resistancen\nNew Price: {price} \nNew Support: {support} \nNew Resistance: {resistance}\nPDUFA: {pdufa}'
+        message_return = f'{company}: ({ticker}) : Has broken above the resistance\nNew Price: {price} \nNew Support: {support} \nNew Resistance: {resistance}\nPDUFA: {pdufa}'
     if code_number == 0:
-        message_return = f'{company}: {ticker} Has broken support\nNew Price: {price} \nNew Support: {support} \nNew Resistance: {resistance}\nPDUFA: {pdufa}'
+        message_return = f'{company}: ({ticker}) : Has broken support\nNew Price: {price} \nNew Support: {support} \nNew Resistance: {resistance}\nPDUFA: {pdufa}'
 
     return message_return, image_filepath
 
 
 
 def delete_element(element):
-    filepath = '../json_files/Ticker_info.json'
+    filepath = 'Ticker_info.json'
     with open(filepath, 'r') as fp:
         data = json.load(fp)
     del data["Ticker_info"][element]
@@ -110,7 +110,7 @@ def delete_element(element):
     return
 
 def update_ticker_info(new_dict):
-    fileObject = open("../json_files/Ticker_info.json", "r")
+    fileObject = open("Ticker_info.json", "r")
     jsonContent = fileObject.read()
     aList = json.loads(jsonContent)
 
@@ -162,7 +162,7 @@ def update_ticker_info(new_dict):
 
 
 
-    with open("../json_files/Ticker_info.json", 'w') as f:
+    with open("Ticker_info.json", 'w') as f:
         json.dump(ticker_info_dict, f, indent=4)
 
     return
